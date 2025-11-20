@@ -6,15 +6,26 @@ numeric_df = df.select_dtypes(include=['number'])
 correlation = numeric_df.corr()
 print(correlation)
 
-Interpretation of the correlation results : 
+## Correlation Analysis
 
-Most variables show weak correlations, so features are largely independent.
-Strong correlations exist among some LSG variables:
-  lsg_1 ↔ lsg_3 = 0.53
-  lsg_4 ↔ lsg_6 = 0.36
-These variables may capture similar information.
-gift_type moderately correlates with lsg_1 and lsg_3, indicating gift type influences these metrics.
-Discounted items are slightly associated with lower prices (is_discounted ↔ price = -0.22).
-Volumes and price are almost uncorrelated (0.037), so price doesn’t strongly affect quantity sold.
-Year variables are mostly independent, except uk_year1 ↔ uk_year2 = 0.93, showing strong similarity.
-Overall: Few strong linear relationships exist; most features are independent, with some redundancy among LSG variables and year columns.
+The correlation matrix shows linear relationships between numerical variables in the dataset.
+
+### Key Points:
+
+- **Most variables**: weak correlations → features are largely independent.
+- **Strong relationships among some LSG variables**:
+  - `lsg_1 ↔ lsg_3 = 0.53`
+  - `lsg_4 ↔ lsg_6 = 0.36`
+  These variables capture similar information.
+- **Gift type influence**:
+  - `gift_type` is moderately correlated with `lsg_1` and `lsg_3`.
+- **Price and discount**:
+  - `is_discounted ↔ price = -0.22` → discounted products tend to have lower prices.
+- **Volumes and price**:
+  - Very weak correlation `0.037` → price does not strongly affect quantity sold.
+- **Year-related variables**:
+  - `uk_year1 ↔ uk_year2 = 0.93` → very strong similarity.
+  - Other year columns → weak correlations with the rest.
+
+**Conclusion:** Few strong linear relationships exist, but watch out for redundancy among some LSG and year columns.
+
