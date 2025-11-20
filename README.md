@@ -6,7 +6,7 @@ numeric_df = df.select_dtypes(include=['number'])
 correlation = numeric_df.corr()
 print(correlation)
 
-## Correlation Analysis
+### Correlation Analysis
 
 The correlation matrix shows linear relationships between numerical variables in the dataset.
 
