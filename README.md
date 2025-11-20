@@ -8,4 +8,13 @@ print(correlation)
 
 Interpretation of the correlation results : 
 
-The correlation matrix shows that most variables have weak relationships, meaning they are largely independent. The strongest links are between some LSG variables (especially lsg_1 with lsg_3 and lsg_4 with lsg_6), indicating they capture similar information. gift_type also shows moderate correlations with some LSG features. As expected, discounted items tend to have lower prices, while price and volumes show almost no relationship. Overall, only a few feature pairs are strongly related.
+Most variables show weak correlations, so features are largely independent.
+Strong correlations exist among some LSG variables:
+  lsg_1 ↔ lsg_3 = 0.53
+  lsg_4 ↔ lsg_6 = 0.36
+These variables may capture similar information.
+gift_type moderately correlates with lsg_1 and lsg_3, indicating gift type influences these metrics.
+Discounted items are slightly associated with lower prices (is_discounted ↔ price = -0.22).
+Volumes and price are almost uncorrelated (0.037), so price doesn’t strongly affect quantity sold.
+Year variables are mostly independent, except uk_year1 ↔ uk_year2 = 0.93, showing strong similarity.
+Overall: Few strong linear relationships exist; most features are independent, with some redundancy among LSG variables and year columns.
