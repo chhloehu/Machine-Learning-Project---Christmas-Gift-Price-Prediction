@@ -10,7 +10,7 @@ print(correlation)
 
 The correlation matrix shows linear relationships between numerical variables in the dataset.
 
-### Key Points:
+## Key Points:
 
 - **Most variables**: weak correlations → features are largely independent.
 - **Strong relationships among some LSG variables**:
